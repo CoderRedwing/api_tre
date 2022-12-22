@@ -3,33 +3,33 @@ import 'Company.dart';
 
 class UserModel {
   UserModel({
-      this.id, 
-      this.name, 
-      this.username, 
-      this.email, 
-      this.address, 
-      this.phone, 
-      this.website, 
-      this.company,});
+      required this.id,
+      required this.name,
+      required this.username,
+      required this.email,
+      required this.address,
+      required this.phone,
+      required this.website,
+      required this.company,});
 
   UserModel.fromJson(dynamic json) {
     id = json['id'];
     name = json['name'];
     username = json['username'];
     email = json['email'];
-    address = json['address'] != null ? Address.fromJson(json['address']) : null;
+    address = (json['address'] != null ? Address.fromJson(json['address']) : null)!;
     phone = json['phone'];
     website = json['website'];
-    company = json['company'] != null ? Company.fromJson(json['company']) : null;
+    company = (json['company'] != null ? Company.fromJson(json['company']) : null)!;
   }
-  int id;
-  String name;
-  String username;
-  String email;
-  Address address;
-  String phone;
-  String website;
-  Company company;
+ late int id;
+ late String name;
+ late String username;
+ late String email;
+ late Address address;
+ late String phone;
+ late String website;
+ late Company company;
 
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
