@@ -36,10 +36,17 @@ class _ExampleOneState extends State<ExampleOne> {
         children: [
           Expanded(
               child: FutureBuilder(
-            future: getUserApi(),
+
+               future: getUserApi(),
                   builder: (context,AsyncSnapshot<List<UserModel>> snapshot){
               if(!snapshot.hasData){
-                return CircularProgressIndicator();
+                return const CircularProgressIndicator(
+
+                  strokeWidth: 5,
+                    backgroundColor: Colors.cyanAccent,
+                    valueColor: AlwaysStoppedAnimation<Color>(Colors.red)
+
+                );
               }else{}
               return ListView.builder(
                 itemCount: userList.length,

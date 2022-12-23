@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:untitled/example.dart';
 import 'package:untitled/example_one.dart';
+import 'package:untitled/example_two.dart';
 import 'package:untitled/home_s.dart';
 
 void main() {
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
 
         primarySwatch: Colors.blue,
       ),
-      home: const ExampleOne(),
+      home: const ExampleTwo(),
                  );
   }
 }
